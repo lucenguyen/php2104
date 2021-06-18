@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        form {
+            padding: 80px;
+            margin-left: 35%;
+            margin-right: 35%;
+            border: 1px solid blue;
+            background-image:url(https://img.freepik.com/free-vector/abstract-blue-geometric-shapes-background_1035-17545.jpg?size=626&ext=jpg) ;
+        }
+        div {
+            margin-top: 0%;
+        }
+        #email {
+            color: blue;
+            display: flex;
+            margin-left: 20px;
+            font-size: 20px;
+            font-weight: 600;
+        }
+        .email {
+            
+
+        }
+        #password {
+            color: blue;
+            display: flex;
+            margin-left: 20px;
+            font-size: 20px;
+            font-weight: 600;
+        }
+        .password {
+            display: flex;
+        }
+        input {
+            padding: 5px;
+            border-radius: 2px;
+        }
+        button {
+            background-color: orange;
+            padding: 10px 15px;
+            margin: 10px 100px 0 100px;
+            border: none;
+            border-radius: 10px;  
+        }
+    </style>
+</head>
+<body>
+    <form name="f-login" id="form" onsubmit="return validateForm()">
+        <div>
+            <label id="email">Email</label>
+            <input name="email" class="email" placeholder="Your Email" type="text">
+        </div>
+        <div>
+            <label id="password">Password</label>
+            <input name="password" type="password" placeholder="Enter PassWord">
+        </div>
+        <div>
+            <button onclick="Dissalable()" id="login" type="">Login</button>
+        </div>
+    </form>
+    <script>
+        function Dissalable() {
+            var x = document.forms["f-login"]["email"].value;
+            var y = document.forms["f-login"]["password"].value;
+              if (x == "" || y== "") {
+                alert("Điền đầy đủ thông tin");
+            return false;
+              }
+        }
+    </script>
+</body>
+</html>
